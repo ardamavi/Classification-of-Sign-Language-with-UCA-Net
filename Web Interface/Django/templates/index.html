@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Vocalize Sign Language</title>
+</head>
+<body>
+<center>
+<a style="text-decoration: none; font-size: 6em;" href="/">
+<span style="color:#fc4f3f;">Vocalize</span> <span style="color:#808080"></span> <span style="color:#3377CC;">Sign Language</span>
+</a>
+<br/><br/><br/>
+<form method="post" action="/predict" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="file" name="image" accept="image/*" apture="camera">
+<br/><br/>
+<button style="width: 100PX;" type="submit"><span>Translate</span></button>
+</form>
+
+<h4 style="color: #4a84cc;">{{ result|safe }}</h4>
+<br/>
+<span style="color:#656565;">Copyright © 2017</span>
+<br/>
+<a style="text-decoration: none; font-size: 1.5em;" href="http://github.com/ardamavi.com" target="_blank"><span style="color:#808080">By</span> <span style="color:#fc4f3f;">Arda</span> <span style="color:#3377CC;">Mavi</span> and <span style="color:#fc4f3f;">Zeynep</span> <span style="color:#3377CC;">Dikle</span></a>
+</center>
+</body>
+</html>
+
+
